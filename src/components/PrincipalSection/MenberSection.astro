@@ -1,0 +1,54 @@
+---
+import MemberCard from "./MemberCard.astro";
+import type { Dictionary } from "@/i18n/types";
+
+interface Props {
+  t: Dictionary;
+}
+
+type MemberKey = keyof Dictionary["members"];
+
+const { t } = Astro.props;
+
+const memberList: { key: MemberKey; image: string }[] = [
+  { key: "ceo", image: "/images/alberto1.jpeg" },
+  { key: "coofounder", image: "/images/man1.jpg" },
+  { key: "techleader", image: "/images/woman1.jpg" },
+];
+---
+
+<section class="member__section py-12 space-y-12 h-[100vh]">
+  {
+    memberList.map((member, index) => {
+      const data = t.members[member.key];
+      return (
+        <MemberCard
+          name={data.name}
+          role={data.role}
+          image={member.image}
+          description={data.description}
+          align={index % 2 === 0 ? "left" : "right"}
+        />
+      );
+    })
+  }
+</section>
+
+<script lang="ts">
+  const cards = document.querySelectorAll(".member-card");
+
+  cards.forEach((card) => {
+    const bgText = card.querySelector(".bg__text__member");
+    const isRight = card.classList.contains("md:flex-row-reverse");
+
+    if (!bgText) return;
+
+    card.addEventListener("mouseenter", () => {
+      bgText.style.transform = isRight ? "translateX(-5%)" : "translateX(5%)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      bgText.style.transform = isRight ? "translateX(-40%)" : "translateX(40%)";
+    });
+  });
+</script>

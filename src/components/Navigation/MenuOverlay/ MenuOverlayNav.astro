@@ -1,0 +1,56 @@
+---
+import type { NavItem } from "@/types/navigation";
+
+export interface Props {
+  pages: NavItem[];
+}
+const { pages = [] } = Astro.props;
+
+const keyFrom = (p: NavItem) =>
+  (p.path?.replace(/^\//, "") || p.name.toLowerCase()).trim() || "home";
+---
+
+<div class="flex w-full gap-16 lg:items-center">
+  <nav
+    id="mainNav"
+    class="bbl-overlay__nav flex flex-col items-start gap-4 w-full max-w-[520px] p-12"
+  >
+    {
+      pages.map((p) => {
+        const url = p.href ?? p.path!;
+        const key = keyFrom(p);
+        return (
+          <div class="nav-item w-full" data-item-key={key}>
+            <a
+              href={url}
+              data-menu-link
+              data-key={key}
+              target={p.external ? "_blank" : "_self"}
+              rel={p.external ? "noopener noreferrer" : undefined}
+              class="inline-block text-[clamp(28px,4vw,44px)] text-white/90 no-underline transition duration-200 ease-out hover:text-white hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60 rounded-md px-1"
+            >
+              {p.name}
+            </a>
+
+            <ul
+              data-submenu
+              class="md:hidden ml-2 mt-2 space-y-2 opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-out text-[clamp(16px,3.2vw,18px)] text-[#7dfcff] [text-shadow:0_0_12px_rgba(125,252,255,.7),0_0_32px_rgba(125,252,255,.4)]"
+            />
+          </div>
+        );
+      })
+    }
+  </nav>
+
+  <div
+    class="hidden md:flex flex-col items-start justify-center pt-2 min-w-[320px] text-left"
+  >
+    <ul
+      id="previewList"
+      class="space-y-2 opacity-0 translate-y-2 transition duration-300 ease-out text-[clamp(18px,2vw,22px)] text-[#7dfcff] [text-shadow:0_0_12px_rgba(125,252,255,.7),0_0_32px_rgba(125,252,255,.4)]"
+    >
+    </ul>
+  </div>
+</div>
+
+<script type="module" src="/src/scripts/menuHover.ts"></script>

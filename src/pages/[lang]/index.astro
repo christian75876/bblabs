@@ -1,0 +1,40 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Welcome from "@/components/Welcome.astro";
+import { loadDict } from "@/i18n";
+import { getStaticLangPaths, type Lang } from "@/i18n/locales";
+import CarouselHero from "@/components/PrincipalSection/CarrouselHero";
+import CarrouselExperience from "@/components/PrincipalSection/CarrouselExperience";
+import CaseCarousel from "@/components/PrincipalSection/CaseCarousel";
+import MenberSection from "@/components/PrincipalSection/MenberSection.astro";
+
+export const getStaticPaths = getStaticLangPaths;
+
+const { lang } = Astro.params as { lang: Lang };
+const t = await loadDict(lang);
+const prefix = `/${lang}`;
+---
+
+<Layout {lang} {t} {prefix}>
+  <CarouselHero {t} client:load />
+  <CarrouselExperience t={t} client:load />
+  <CaseCarousel {t} client:only="react" />
+  <MenberSection {t} />
+
+  <button
+    id="floatingBtn"
+    class="group relative !px-4 !py-2 !rounded-full
+    text-white font-semibold text-xs
+    lg:text-base
+    bg-[#babad6b7]
+    transition-all duration-300
+    hover:bg-[#22d6d6a8]
+    shadow-[0_4px_12px_rgba(125,252,255,0.25)]
+    hover:shadow-[0_4px_12px_rgba(255,252,255,0.75)]
+    cursor-pointer
+    active:scale-[0.97]
+    hover-bbl"
+  >
+    {t.contact}
+  </button>
+</Layout>

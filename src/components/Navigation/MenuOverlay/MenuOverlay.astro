@@ -1,0 +1,27 @@
+---
+import type { NavItem } from "@/types/navigation";
+import MenuOverlayFooter from "./MenuOverlayFooter.astro";
+import "./menuOverlay.css";
+import MenuOverlayNav from "./ MenuOverlayNav.astro";
+
+export interface Props {
+  pages: NavItem[];
+  id?: string;
+  title?: string;
+}
+const { pages = [], id = "menu-overlay", title = "Main menu" } = Astro.props;
+---
+
+<div
+  id={id}
+  class="bbl-overlay"
+  aria-hidden="true"
+  aria-modal="true"
+  role="dialog"
+  aria-label={title}
+>
+  <div class="bbl-overlay__inner flex h-full w-full">
+    <MenuOverlayNav pages={pages} />
+    <MenuOverlayFooter />
+  </div>
+</div>

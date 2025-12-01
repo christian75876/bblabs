@@ -1,0 +1,75 @@
+
+---
+import Instagram from "@/icons/instagram.astro";
+import LinkedIn from "@/icons/linkedIn.astro";
+import Email from "@/icons/email.astro";
+import Facebook from "@/icons/facebook.astro";
+import Twitter from "@/icons/x.astro";
+import Youtube from "@/icons/youtube.astro";
+---
+
+<footer
+  class="bbl-overlay__footer w-full pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 text-bbl-text"
+>
+  <div
+    class="bbl-overlay__footer-inner
+           flex flex-wrap items-center justify-center gap-4
+           md:justify-end md:gap-5"
+  >
+    <a aria-label="Instagram"
+       href="https://www.instagram.com/blackbirdlabs/"
+       target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <Instagram class="h-7 w-7 md:h-8 md:w-8" />
+    </a>
+
+    <a aria-label="LinkedIn"
+       href="https://www.linkedin.com/company/black-bird-labs/"
+       target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <LinkedIn class="h-7 w-7 md:h-8 md:w-8" />
+    </a>
+
+    <a aria-label="Email"
+       href="mailto:hola@blackbirdlabs.com" target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <Email class="h-8 w-8 md:h-9 md:w-9" />
+    </a>
+
+    <a aria-label="Facebook"
+       href="https://www.facebook.com/blackbirdlabs/" target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <Facebook class="h-7 w-7 md:h-8 md:w-8" />
+    </a>
+
+    <a aria-label="Twitter"
+       href="https://twitter.com/blackbirdlabs" target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <Twitter class="h-6 w-6 md:h-7 md:w-7" />
+    </a>
+
+    <a aria-label="YouTube"
+       href="https://www.youtube.com/channel/UC3-5-2-0-3v-1-4-2" target="_blank" rel="noopener noreferrer"
+       class="inline-flex h-12 w-12 items-center justify-center rounded-xl
+              text-bbl-primary hover:text-bbl-secondary
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60
+              transition-colors duration-300 md:h-14 md:w-14">
+      <Youtube class="h-7 w-7 md:h-8 md:w-8" />
+    </a>
+  </div>
+</footer>

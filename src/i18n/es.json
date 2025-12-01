@@ -1,0 +1,104 @@
+{
+  "brand": "BlackBird Labs",
+
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "coworking": "Coworking"
+  },
+
+  "hero": {
+    "title": "Impulsamos tu crecimiento.",
+    "phrases": [
+      "Convertimos talento en impacto real.",
+      "Aceleramos ideas que llevan tu empresa al siguiente nivel.",
+      "Potenciamos a quienes construyen el futuro.",
+      "Creamos espacios donde trabajar se convierte en crecer."
+    ],
+    "rating": {
+      "line1": "Con nosotros, el desarrollo de tu app está en manos expertas.",
+      "line2": "Relájate — nosotros nos encargamos.",
+      "tagline": "Excelencia garantizada."
+    }
+  },
+
+  "experience": {
+    "headerTop": "La confianza lo es todo.",
+    "headerBottom": "Porque la confianza no se da, se gana.",
+    "testimonials": [
+      {
+        "name": "Laura Martínez",
+        "role": "Directora de Operaciones",
+        "company": "TechNova",
+        "text": "Gracias a BlackBird Labs, pudimos escalar nuestro equipo en tiempo récord. La eficiencia y el acompañamiento fueron excepcionales.",
+        "avatar": "L"
+      },
+      {
+        "name": "Carlos Méndez",
+        "role": "CEO",
+        "company": "DigitalWorks",
+        "text": "La calidad del talento que encontramos con BBL superó nuestras expectativas. Un servicio ágil, serio y humano.",
+        "avatar": "C"
+      },
+      {
+        "name": "Ana Torres",
+        "role": "Coordinadora de Proyectos",
+        "company": "SkyLab",
+        "text": "Las soluciones flexibles de coworking fueron clave para nuestro crecimiento. La experiencia ha sido impecable.",
+        "avatar": "A"
+      },
+      {
+        "name": "Juan Ortiz",
+        "role": "Director de Innovación",
+        "company": "CloudCore",
+        "text": "El soporte estratégico que recibimos transformó nuestra operación. Totalmente recomendados.",
+        "avatar": "J"
+      }
+    ]
+  },
+  "cases": {
+    "tudeuna": {
+      "title": "TUDEUNA:",
+      "highlight": "MVP",
+      "subtitle": "& ESTRATEGIA",
+      "client": "TuDeUna",
+      "description": "Diseñamos y desarrollamos TuDeUna, un MVP de dropshipping enfocado en automatización y lanzamiento rápido. La plataforma agiliza la gestión de catálogo, la publicación de productos y el cumplimiento de pedidos, permitiendo a creadores y emprendedores comenzar a vender al instante."
+    },
+
+    "arro": {
+      "title": "ARRO APP:",
+      "highlight": "REDISEÑO",
+      "subtitle": "& AUTOMATIZACIÓN",
+      "client": "ARRO Systems",
+      "description": "ARRO es una plataforma esencial para la gestión de emergencias y la Guardia Nacional. Modernizamos su UI/UX y automatizamos flujos clave para mejorar la recopilación de datos, el seguimiento de misiones y la coordinación en tiempo real entre agencias estatales."
+    },
+
+    "lavelada": {
+      "title": "LAVELADA:",
+      "highlight": "ECOMMERCE",
+      "subtitle": "PLATAFORMA",
+      "client": "La Velada",
+      "description": "Una plataforma de ecommerce de nueva generación, diseñada para rendimiento y escala, con navegación ultrarrápida, interfaz moderna y soporte para visualizaciones 3D que enriquecen la experiencia del usuario."
+    }
+  },
+  "contact": "Contáctanos",
+  "members": {
+    "ceo": {
+      "role": "CEO",
+      "name": "Alberto Godoy",
+      "description": "Director de Blackbird Labs, un experto en estrategia de negocio y producto. Alberto lidera una visión clara y una estrategia precisa para tu producto, recluta talento de alto nivel, planifica con exactitud y te guía hacia el mejor enfoque posible."
+    },
+    "coofounder": {
+      "role": "Cofundador y COO",
+      "name": "Carlos Méndez",
+      "description": "Carlos es un emprendedor experimentado y estratega de negocios. Cuenta con un historial comprobado en el desarrollo y escalado de empresas exitosas. Su pasión por la innovación lo impulsa a buscar constantemente nuevas formas de mejorar nuestros productos y servicios."
+    },
+    "techleader": {
+      "role": "Tech Lead",
+      "name": "Ana Torres",
+      "description": "Ana es una ingeniera de software con amplia experiencia y una líder en desarrollo de productos. Ha demostrado su capacidad para construir y escalar soluciones tecnológicas exitosas. Su enfoque innovador la motiva a mejorar continuamente nuestros productos y procesos."
+    }
+  }
+}

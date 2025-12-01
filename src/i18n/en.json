@@ -1,0 +1,105 @@
+{
+  "brand": "BlackBird Labs",
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "coworking": "Coworking"
+  },
+
+  "hero": {
+    "title": "We power your growth.",
+    "phrases": [
+      "We turn talent into real impact.",
+      "We accelerate ideas that take your company to the next level.",
+      "We empower those who build the future.",
+      "We create spaces where work becomes growth."
+    ],
+    "rating": {
+      "line1": "With us, your app development is in expert hands.",
+      "line2": "Relax — we’ve got this.",
+      "tagline": "Expect excellence."
+    }
+  },
+
+  "experience": {
+    "headerTop": "Trust is everything.",
+    "headerBottom": "Because trust isn’t given — it’s earned.",
+    "testimonials": [
+      {
+        "name": "Laura Martínez",
+        "role": "Operations Director",
+        "company": "TechNova",
+        "text": "Thanks to BlackBird Labs, we were able to scale our team in record time. The efficiency and support were exceptional.",
+        "avatar": "L"
+      },
+      {
+        "name": "Carlos Méndez",
+        "role": "CEO",
+        "company": "DigitalWorks",
+        "text": "The quality of talent we found with BBL exceeded our expectations. Fast, professional, and human service.",
+        "avatar": "C"
+      },
+      {
+        "name": "Ana Torres",
+        "role": "Project Coordinator",
+        "company": "SkyLab",
+        "text": "The flexible coworking solutions were key to our growth. The experience has been flawless.",
+        "avatar": "A"
+      },
+      {
+        "name": "Juan Ortiz",
+        "role": "Innovation Director",
+        "company": "CloudCore",
+        "text": "The strategic support we received transformed our operations. Highly recommended.",
+        "avatar": "J"
+      }
+    ]
+  },
+  "cases": {
+    "tudeuna": {
+      "title": "TUDEUNA:",
+      "highlight": "MVP",
+      "subtitle": "& STRATEGY",
+      "client": "TuDeUna",
+      "description": "We designed and developed TuDeUna, a fast-launch dropshipping MVP focused on automation. The platform streamlines catalog management, product publishing, and order fulfillment, enabling creators and entrepreneurs to start selling instantly."
+    },
+
+    "arro": {
+      "title": "ARRO APP:",
+      "highlight": "REDESIGN",
+      "subtitle": "& AUTOMATION",
+      "client": "ARRO Systems",
+      "description": "ARRO is a mission-critical platform for emergency management and the National Guard. We modernized its UI/UX and automated key workflows to improve data collection, mission tracking, and real-time coordination across statewide agencies."
+    },
+
+    "lavelada": {
+      "title": "LAVELADA:",
+      "highlight": "ECOMMERCE",
+      "subtitle": "PLATFORM",
+      "client": "La Velada",
+      "description": "A next-gen ecommerce platform built for performance and scale, featuring ultra-fast navigation, sleek UI, and support for 3D product previews for richer user experiences."
+    }
+  },
+
+  "contact": "Contact",
+  "members": {
+    "ceo": {
+      "role": "CEO",
+      "name": "Alberto Godoy",
+      "description": "Head of Blackbird Labs, an experienced business and product strategist. Alberto leads a clear journey and strategy for your product, recruits top talent, plans precisely, and guides you to the best approach."
+    },
+    "coofounder": {
+      "role": "COO Founder",
+      "name": "Carlos Mendez",
+      "description": "Carlos is a seasoned entrepreneur and business strategist. He has a proven track record of developing and scaling successful businesses. Carlos is passionate about innovation and is always looking for new ways to improve our products and services."
+    },
+    "techleader": {
+      "role": "Tech Lead",
+      "name": "Ana Torres",
+      "description": "Ana is a seasoned software engineer and a master of product development. She has a proven track record of developing and scaling successful businesses. Ana is passionate about innovation and is always looking for new ways to improve our products and services."
+    }
+  }
+}

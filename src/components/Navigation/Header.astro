@@ -1,0 +1,59 @@
+---
+import Brand from "./Brand.astro";
+import NavDesktop from "./NavDesktop.astro";
+import HamburgerButton from "./HamburgerButton.astro";
+import MenuOverlay from "@/components/Navigation/MenuOverlay/MenuOverlay.astro";
+import type { Dictionary } from "@/i18n/types";
+import type { NavItem } from "@/types/navigation";
+import "@/styles/header.css";
+
+export interface Props {
+  t: Dictionary;
+  lang: "en" | "es";
+  prefix: string;
+}
+
+const { t, prefix } = Astro.props;
+
+const rawPages: NavItem[] = [
+  { name: t.nav.home, path: `${prefix}/` },
+  { name: t.nav.about, path: `${prefix}/about` },
+  { name: t.nav.services, path: `${prefix}/services` },
+  { name: t.nav.contact, path: `${prefix}/contact` },
+  { name: t.nav.coworking, href: `${prefix}/coworking`, external: true },
+];
+
+const { pathname } = Astro.url;
+const normalizedPath =
+  pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+
+const pages = rawPages.map((p) => {
+  const url = p.href ?? p.path!;
+  const path = url !== "/" && url.endsWith("/") ? url.slice(0, -1) : url;
+  return {
+    ...p,
+    path,
+    active:
+      !p.external &&
+      (normalizedPath === path ||
+        (path === "/" && normalizedPath.startsWith("/"))),
+  };
+});
+---
+
+<header class="site-header fixed top-0 z-50 w-screen py-4">
+  <div
+    class="w-full h-16 px-6 grid grid-cols-[1fr_auto_auto] items-center gap-8"
+  >
+    <Brand />
+    <NavDesktop pages={pages} />
+    <div class="flex items-center gap-4 h-full">
+      <div id="btnContainer" class="flex mr-2 md:mr-16"></div>
+      <HamburgerButton />
+    </div>
+  </div>
+</header>
+
+<MenuOverlay pages={pages} id="menu-overlay" title="Main menu" />
+
+<script type="module" src="/src/scripts/header-compact.ts"></script>

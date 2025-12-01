@@ -1,0 +1,28 @@
+---
+import RippleCursor from "@/components/Cursor";
+import "../styles/global.css";
+import Header from "@/components/Navigation/Header.astro";
+import { loadDict } from "@/i18n";
+import "@fontsource/outfit";
+const lang = (Astro.locals.lang ?? "en") as "en" | "es";
+const t = await loadDict(lang);
+const prefix = `/${lang}`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body class="bg-bbl-background text-bbl-text bg-black">
+    <Header {t} {lang} {prefix} />
+    <main>
+      <slot />
+    </main>
+    <RippleCursor client:load />
+  </body>
+</html>

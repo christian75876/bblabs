@@ -1,0 +1,37 @@
+---
+export interface NavItem {
+  name: string;
+  path?: string;
+  href?: string;
+  external?: boolean;
+  active?: boolean;
+}
+export interface Props {
+  pages: NavItem[];
+}
+const { pages } = Astro.props;
+---
+
+<nav
+  id="menuppal"
+  class="hidden text-3xl lg:flex items-center gap-8 will-fade justify-self-center lg:col-start-2"
+>
+  {
+    pages.map((page) => (
+      <a
+        href={page.href ?? page.path!}
+        target={page.external ? "_blank" : "_self"}
+        rel={page.external ? "noopener noreferrer" : undefined}
+        aria-current={page.active ? "page" : undefined}
+        class:list={{
+          "pb-1 border-b-2 text-[#7dfcff] [text-shadow:0_0_12px_rgba(125,252,255,.7),0_0_32px_rgba(125,252,255,.4)] font-semibold":
+            page.active,
+          "text-white transition-colors duration-300": !page.active,
+          "hover-bbl": !page.active,
+        }}
+      >
+        {page.name}
+      </a>
+    ))
+  }
+</nav>
