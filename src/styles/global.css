@@ -38,6 +38,13 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+@media (pointer: coarse), (hover: none) {
+  html,
+  body {
+    cursor: auto;
+  }
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

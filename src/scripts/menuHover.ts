@@ -102,60 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const setupMobile = () => {
-    links.forEach((link) => {
-      const rawKey = link.dataset.key || "";
-      const href = link.getAttribute("href") || "";
-      const key = normalizeKey(rawKey, href);
-      const item = link.closest<HTMLElement>(".nav-item");
-      const sub = item?.querySelector<HTMLUListElement>("ul[data-submenu]");
-      if (!sub) return;
-
-      link.addEventListener("click", (e) => {
-        if (!isMobile()) return;
-        const alreadyOpen = sub.hasAttribute("data-open");
-        if (!alreadyOpen) {
-          e.preventDefault();
-          const items = content[key] || [];
-          if (items.length === 0) {
-            return;
-          }
-          collapseAllExcept(sub);
-          fillList(sub, items);
-          sub.setAttribute("data-open", "true");
-          expand(sub);
-        } else {
-        }
-      });
-
-      link.addEventListener("keydown", (ev) => {
-        if (!isMobile()) return;
-        const k = (ev as KeyboardEvent).key;
-        if (k === "Enter" || k === " ") {
-          ev.preventDefault();
-          const opened = sub.hasAttribute("data-open");
-          if (opened) {
-            sub.removeAttribute("data-open");
-            collapse(sub);
-          } else {
-            const items = content[key] || [];
-            if (items.length) {
-              collapseAllExcept(sub);
-              fillList(sub, items);
-              sub.setAttribute("data-open", "true");
-              expand(sub);
-            }
-          }
-        }
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!isMobile()) return;
-      if (!nav.contains(e.target as Node)) collapseAllExcept(undefined);
-    });
-  };
-
   let clearTimer: number | null = null;
   const showDesktop = (key: string) => {
     if (!desktopList) return;
@@ -220,8 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
       desktopList.innerHTML = "";
       desktopList.classList.add("opacity-0", "translate-y-2");
     }
-    if (isMobile()) setupMobile();
-    else setupDesktop();
+    if (!isMobile()) setupDesktop();
   };
 
   init();

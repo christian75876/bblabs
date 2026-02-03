@@ -11,6 +11,14 @@ export const useCursor = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    const prefersCoarse =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(pointer: coarse), (hover: none)").matches;
+    if (prefersCoarse) {
+      canvas.style.display = "none";
+      return;
+    }
+
     const ctx = canvas.getContext("2d")!;
     const getDPR = () => Math.min(2, Math.max(1, window.devicePixelRatio || 1));
 
