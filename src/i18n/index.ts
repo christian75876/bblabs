@@ -1,4 +1,11 @@
 export type Lang = "en" | "es";
+
+const DICTS: Record<Lang, () => Promise<any>> = {
+  en: () => import("./en.json"),
+  es: () => import("./es.json"),
+};
+
 export async function loadDict(lang: Lang) {
-  return (await import(`./${lang}.json`)).default;
+  const mod = await DICTS[lang]();
+  return mod.default;
 }
