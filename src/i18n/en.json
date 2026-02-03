@@ -76,10 +76,10 @@
     },
 
     "lavelada": {
-      "title": "Riwi:",
-      "highlight": "LANDING",
+      "title": "LAVELADA:",
+      "highlight": "ECOMMERCE",
       "subtitle": "PLATFORM",
-      "client": "Riwi",
+      "client": "La Velada",
       "description": "A next-gen ecommerce platform built for performance and scale, featuring ultra-fast navigation, sleek UI, and support for 3D product previews for richer user experiences."
     }
   },
@@ -92,9 +92,9 @@
       "description": "Head of Blackbird Labs, an experienced business and product strategist. Alberto leads a clear journey and strategy for your product, recruits top talent, plans precisely, and guides you to the best approach."
     },
     "coofounder": {
-      "role": "COO Founder",
-      "name": "Carlos Mendez",
-      "description": "Carlos is a seasoned entrepreneur and business strategist. He has a proven track record of developing and scaling successful businesses. Carlos is passionate about innovation and is always looking for new ways to improve our products and services."
+      "role": "Developer",
+      "name": "Christian Pabon",
+      "description": "Christian is the developer and creator of the site. He designs and builds digital solutions focused on performance, scalability, and solid architecture. He is involved in the entire development cycle—from concept to production—with a strong emphasis on code quality and user experience."
     },
     "techleader": {
       "role": "Tech Lead",

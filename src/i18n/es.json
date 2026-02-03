@@ -36,9 +36,9 @@
         "avatar": "L"
       },
       {
-        "name": "Carlos Méndez",
-        "role": "CEO",
-        "company": "DigitalWorks",
+        "name": "Christian Pabon",
+        "role": "Developer",
+        "company": "bbls",
         "text": "La calidad del talento que encontramos con BBL superó nuestras expectativas. Un servicio ágil, serio y humano.",
         "avatar": "C"
       },
@@ -91,9 +91,9 @@
       "description": "Director de Blackbird Labs, un experto en estrategia de negocio y producto. Alberto lidera una visión clara y una estrategia precisa para tu producto, recluta talento de alto nivel, planifica con exactitud y te guía hacia el mejor enfoque posible."
     },
     "coofounder": {
-      "role": "Cofundador y COO",
-      "name": "Carlos Méndez",
-      "description": "Carlos es un emprendedor experimentado y estratega de negocios. Cuenta con un historial comprobado en el desarrollo y escalado de empresas exitosas. Su pasión por la innovación lo impulsa a buscar constantemente nuevas formas de mejorar nuestros productos y servicios."
+      "role": "Desarrollador",
+      "name": "Christian Pabon",
+      "description": "Christian es el desarrollador y creador del sitio. Diseña y construye soluciones digitales enfocadas en rendimiento, escalabilidad y buena arquitectura. Participa en todo el ciclo de desarrollo —desde la idea hasta la puesta en producción— con especial atención a la calidad del código y la experiencia del usuario."
     },
     "techleader": {
       "role": "Tech Lead",
