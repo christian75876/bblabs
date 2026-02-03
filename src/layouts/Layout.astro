@@ -12,7 +12,9 @@ const description =
   lang === "es"
     ? "Sitio creado con Astro para presentar un proyecto moderno, rápido y optimizado."
     : "Website built with Astro to showcase a modern, fast, and optimized project.";
-const ogImage = "/images/thumbnail.png";
+const siteUrl = "https://bblabs.netlify.app";
+const ogImage = `${siteUrl}/images/thumbnail.png`;
+const canonical = `${siteUrl}${Astro.url.pathname}`;
 const ogType = "website";
 ---
 
@@ -24,10 +26,12 @@ const ogType = "website";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content={lang === "es" ? "es_ES" : "en_US"} />
     <meta property="og:title" content="BBLS" />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BBLS" />
