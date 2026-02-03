@@ -83,6 +83,20 @@
   transform: translateY(0);
 }
 
+/* Fallback when JS only toggles html.menu-open */
+html.menu-open .bbl-overlay {
+  transform: translateY(0);
+  visibility: visible;
+}
+html.menu-open .bbl-overlay::before,
+html.menu-open .bbl-overlay::after {
+  transform: translateY(0%);
+}
+html.menu-open .bbl-overlay__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .bbl-overlay__close {
   justify-self: end;
   width: 44px;
