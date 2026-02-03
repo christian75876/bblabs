@@ -13,9 +13,17 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
   const url = new URL(ctx.request.url);
   const [, maybeLang = ""] = url.pathname.split("/");
 
+  const isPublicFile = /\.[^/]+$/.test(url.pathname);
+  if (isPublicFile) {
+    return next();
+  }
+
   let lang: Lang | null = isLang(maybeLang) ? maybeLang : null;
 
   if (!lang) {
+    if (url.pathname.startsWith("/404") || url.pathname.startsWith("/500")) {
+      return next();
+    }
     const accept = (
       ctx.request.headers.get("accept-language") || ""
     ).toLowerCase();
