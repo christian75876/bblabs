@@ -6,7 +6,6 @@ import MenuOverlay from "@/components/Navigation/MenuOverlay/MenuOverlay.astro";
 import type { Dictionary } from "@/i18n/types";
 import { getRawPages } from "@/components/consts/getPages";
 import "@/styles/header.css";
-import headerCompactUrl from "@/scripts/header-compact.ts?url";
 
 export interface Props {
   t: Dictionary;
@@ -51,4 +50,4 @@ const pages = rawPages.map((p) => {
 
 <MenuOverlay pages={pages} id="menu-overlay" title="Main menu" />
 
-<script type="module" src={headerCompactUrl}></script>
+<script type="module" src="/scripts/header-compact.js"></script>
