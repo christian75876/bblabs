@@ -74,4 +74,13 @@ export interface Dictionary {
       description: string;
     };
   };
+  footer: {
+    intro: string;
+  };
+  about: {
+    title: string;
+    headerAbout: string;
+    mission: string;
+    vision: string;
+  };
 }

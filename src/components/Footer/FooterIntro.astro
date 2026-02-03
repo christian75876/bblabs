@@ -1,0 +1,23 @@
+---
+import type { Dictionary } from "@/i18n/types";
+import Brand from "../Navigation/Brand.astro";
+import LinkedIn from "@/icons/linkedIn.astro";
+import Instagram from "@/icons/instagram.astro";
+import X from "@/icons/x.astro";
+interface Props {
+  t: Dictionary;
+}
+const { t } = Astro.props;
+---
+
+<div class="space-y-4">
+  <div>
+    <Brand size="sm" />
+  </div>
+  <p class="text-white/60 text-sm leading-relaxed">{t.footer.intro}</p>
+  <div class="flex gap-4 mt-4">
+    <a href="#" class="hover:text-white/90 transition"><X /></a>
+    <a href="#" class="hover:text-white/90 transition"><LinkedIn /></a>
+    <a href="#" class="hover:text-white/90 transition"><Instagram /></a>
+  </div>
+</div>

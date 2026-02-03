@@ -1,0 +1,103 @@
+---
+import type { Dictionary } from "@/i18n/types";
+import { getRawPages } from "../consts/getPages";
+import FooterIntro from "./FooterIntro.astro";
+
+interface Props {
+  t: Dictionary;
+  lang: "en" | "es";
+  prefix: string;
+}
+
+const { t, prefix } = Astro.props;
+
+const companyLinks = getRawPages(t, prefix);
+
+interface LinkItem {
+  label: string;
+  href: string;
+}
+
+const resourcesLinks: LinkItem[] = [
+  { label: "Blog", href: "/blog" },
+  { label: "FAQs", href: "/faqs" },
+  { label: "Soporte", href: "/support" },
+];
+
+const legalLinks: LinkItem[] = [
+  { label: "Privacidad", href: "/privacy" },
+  { label: "Términos", href: "/terms" },
+  { label: "Cookies", href: "/cookies" },
+];
+---
+
+<footer class="w-full text-white py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <FooterIntro {t} />
+    <!-- Sección dinámica -->
+    <div>
+      <h3 class="font-bold text-lg mb-4">Compañía</h3>
+      <ul class="space-y-2">
+        {
+          companyLinks.map((item) => (
+            <li>
+              {" "}
+              <a
+                href={item.href}
+                class="text-white/60 hover:text-white transition text-sm"
+              >
+                {" "}
+                {item.name}{" "}
+              </a>{" "}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-4">Recursos</h3>
+      <ul class="space-y-2">
+        {
+          resourcesLinks.map((item) => (
+            <li>
+              {" "}
+              <a
+                href={item.href}
+                class="text-white/60 hover:text-white transition text-sm"
+              >
+                {" "}
+                {item.label}{" "}
+              </a>{" "}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold text-lg mb-4">Legal</h3>
+      <ul class="space-y-2">
+        {
+          legalLinks.map((item) => (
+            <li>
+              {" "}
+              <a
+                href={item.href}
+                class="text-white/60 hover:text-white transition text-sm"
+              >
+                {" "}
+                {item.label}{" "}
+              </a>{" "}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <!-- Línea final -->
+  <div
+    class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between text-sm text-white/40"
+  >
+    <p>© {new Date().getFullYear()} BBL Studio — All rights reserved.</p>
+    <p class="mt-2 md:mt-0">Hecho con ❤️ en Astro</p>
+  </div>
+</footer>

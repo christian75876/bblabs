@@ -1,0 +1,44 @@
+---
+import type { Dictionary } from "@/i18n/types";
+
+type Props = {
+  t: Dictionary;
+};
+
+const { t } = Astro.props;
+---
+
+<header class="flex flex-col space-y-4 md:space-y-6 lg:space-y-8">
+  <h1
+    id="highlight"
+    class="bg-[#7DFDFF] text-black px-4 w-fit font-bold
+           text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+           leading-none"
+  >
+    {t.about.title}
+  </h1>
+
+  <p
+    class="text-white text-lg sm:text-xl md:text-2xl
+           w-full sm:w-3/4 md:w-1/2"
+  >
+    {t.about.headerAbout}
+  </p>
+</header>
+
+<script>
+  import { animate } from "animejs";
+
+  const highlight = document.getElementById("highlight");
+  if (highlight) {
+    const naturalWidth = highlight.offsetWidth;
+
+    highlight.style.width = "0px";
+
+    animate(highlight, {
+      width: [0, naturalWidth],
+      easing: "easeOutExpo",
+      duration: 1600,
+    });
+  }
+</script>

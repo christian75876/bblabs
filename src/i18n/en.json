@@ -101,5 +101,15 @@
       "name": "Ana Torres",
       "description": "Ana is a seasoned software engineer and a master of product development. She has a proven track record of developing and scaling successful businesses. Ana is passionate about innovation and is always looking for new ways to improve our products and services."
     }
+  },
+  "footer": {
+    "intro": "We create digital products, platforms, and experiences for brands that want to stand out."
+  },
+
+  "about": {
+    "title": "About",
+    "headerAbout": "We are a unique group of specialists, artists, architects, strategists, and down-to-earth problem solvers who believe in the power of stories to transform the world. We exist to help business leaders create and connect their stories in three dimensions: strategic brand narratives, spatial environments, and interactive media. We collaborate with like-minded brands and agencies to create immersive environments and experiences that uplift the spirit.",
+    "mission": "To be a fundamental extension of the companies we work with, offering the same dedication, passion, and commitment to their success as we do to our own. To break barriers, elevate potential, and deliver results that transform and inspire continuous growth for our partners.",
+    "vision": "For Blackbirds to be recognized as an indispensable extension of our clients’ teams, working collaboratively to drive innovation, success, and long-term growth. We aspire to be the strategic partner that understands their challenges, acts with a shared vision, and generates value at every stage of the journey."
   }
 }

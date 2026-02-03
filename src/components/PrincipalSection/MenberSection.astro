@@ -17,7 +17,7 @@ const memberList: { key: MemberKey; image: string }[] = [
 ];
 ---
 
-<section class="member__section py-12 space-y-12 h-[100vh]">
+<section class="member__section py-12 space-y-12 min-h-screen">
   {
     memberList.map((member, index) => {
       const data = t.members[member.key];
@@ -48,7 +48,7 @@ const memberList: { key: MemberKey; image: string }[] = [
     });
 
     card.addEventListener("mouseleave", () => {
-      bgText.style.transform = isRight ? "translateX(-40%)" : "translateX(40%)";
+      bgText.style.transform = isRight ? "translateX(-20%)" : "translateX(20%)";
     });
   });
 </script>

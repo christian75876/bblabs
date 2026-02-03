@@ -1,16 +1,33 @@
 ---
 import BBLIcon from "@/icons/bblIcon.astro";
+
+export interface Props {
+  size: "sm" | "md" | "lg";
+  text_color?: "gray" | "white";
+  text_props?: string;
+}
+
+const { size, text_color = "white", text_props } = Astro.props;
+
+const sizeClass = {
+  sm: "w-12 h-12 lg:w-12 lg:h-12",
+  md: "w-16 h-16 lg:w-20 lg:h-20",
+  lg: "w-20 h-20 lg:w-24 lg:h-24",
+};
+
+const textColor = {
+  gray: "text-muted",
+  white: "text-white",
+};
 ---
 
 <a
   href="/"
   class="flex -mb-4 lg:-mb-6 items-center gap-2 justify-self-start col-start-1"
 >
-  <BBLIcon
-    class="w-12 h-12 lg:w-16 lg:h-16 text-white hover:text-bbl-secondary transition-colors duration-300"
-  />
+  <BBLIcon <BBLIcon class={`${sizeClass[size]}`} />
   <span
-    class="brand text-white text-3xl -mt-3 hidden lg:inline-block font-extrabold tracking-wide"
-    >Black Bird Labs</span
+    class=`${textColor[text_color]} brand ${text_props} -mt-3 hidden lg:inline-block font-extrabold tracking-wide`
+    }>Black Bird Labs</span
   >
 </a>
