@@ -76,10 +76,10 @@
     },
 
     "lavelada": {
-      "title": "LAVELADA:",
-      "highlight": "ECOMMERCE",
+      "title": "Riwi:",
+      "highlight": "LANDING",
       "subtitle": "PLATFORM",
-      "client": "La Velada",
+      "client": "Riwi",
       "description": "A next-gen ecommerce platform built for performance and scale, featuring ultra-fast navigation, sleek UI, and support for 3D product previews for richer user experiences."
     }
   },

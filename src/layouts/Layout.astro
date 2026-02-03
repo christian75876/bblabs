@@ -8,6 +8,12 @@ import "@fontsource/outfit";
 const lang = (Astro.locals.lang ?? "en") as "en" | "es";
 const t = await loadDict(lang);
 const prefix = `/${lang}`;
+const description =
+  lang === "es"
+    ? "Sitio creado con Astro para presentar un proyecto moderno, rápido y optimizado."
+    : "Website built with Astro to showcase a modern, fast, and optimized project.";
+const ogImage = "/images/thumbnail.png";
+const ogType = "website";
 ---
 
 <!doctype html>
@@ -17,7 +23,17 @@ const prefix = `/${lang}`;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content={lang === "es" ? "es_ES" : "en_US"} />
+    <meta property="og:title" content="BBLS" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BBLS" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <title>BBLS</title>
   </head>
   <body class="bg-bbl-background text-bbl-text bg-black">
     <Header {t} {lang} {prefix} />
