@@ -1,5 +1,6 @@
 ---
 import type { NavItem } from "@/types/navigation";
+import menuHoverUrl from "@/scripts/menuHover.ts?url";
 
 export interface Props {
   pages: NavItem[];
@@ -53,4 +54,4 @@ const keyFrom = (p: NavItem) =>
   </div>
 </div>
 
-<script type="module" src="/src/scripts/menuHover.ts"></script>
+<script type="module" src={menuHoverUrl}></script>
